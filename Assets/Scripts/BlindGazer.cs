@@ -8,7 +8,7 @@ public class BlindGazer : MonoBehaviour
 
     public float movementSpeed = 5;
 
-    [SerializeField] private int NumberOfMovements = 5;
+    [SerializeField] private int NumberOfMovements = 100;
     private float counter = 0;
     
     // Start is called before the first frame update

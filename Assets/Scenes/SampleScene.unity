@@ -292,7 +292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814079769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.89, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -310,6 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a730bb2b82a41478f4ccd7cd64e214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 7
+  NumberOfMovements: 100
 --- !u!1 &843584471
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +601,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116686331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.57, y: 0.04, z: 0}
+  m_LocalPosition: {x: -4.16, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 843584472}
@@ -618,3 +620,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e00d26de38a8cf47b4dbd59e3854bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 843584471}
+  projectileDistance: 3

@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class DrunkSkeleton : MonoBehaviour
 {
-    public int projectileCoolDown;
+    
 
     public GameObject projectile;
 
-    private int projectileDistance = 3;
+    [SerializeField] private int projectileDistance = 3;
     private float timeStamp;
     private GameObject clone;
+    private float projectileCoolDown;
+    private float offsetConstant = 1;
 
     // Start is called before the first frame update
     void Start()
     {
+        calculateSpeedOffset();
+        projectile.SetActive(false);
         Shoot();
 
     }
@@ -33,14 +37,22 @@ public class DrunkSkeleton : MonoBehaviour
         Destroy(clone);
         timeStamp = Time.time + projectileCoolDown;
        
-        int x = Random.Range(-3, 4);
-        int y = Random.Range(-3, 4);
+        int x = Random.Range(-projectileDistance, projectileDistance + 1);
+        int y = Random.Range(-projectileDistance, projectileDistance + 1);
         while (x==0 && y==0)
         {
-            x = Random.Range(-3, 4);
-            y = Random.Range(-3, 4);
+            x = Random.Range(-projectileDistance, projectileDistance + 1);
+            y = Random.Range(-projectileDistance, projectileDistance + 1);
         }
         clone = Instantiate(projectile, gameObject.transform.position + new Vector3(x,y,0),Quaternion.identity);
+        clone.SetActive(true);
+    }
 
+    void calculateSpeedOffset()
+    {
+        GameObject blindGazer = GameObject.Find("Blind Gazer");
+        BlindGazer blindGazerScript = blindGazer.GetComponent<BlindGazer>();
+
+        projectileCoolDown = (1 / blindGazerScript.movementSpeed) + offsetConstant;
     }
 }
