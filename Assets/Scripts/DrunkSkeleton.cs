@@ -9,10 +9,10 @@ public class DrunkSkeleton : MonoBehaviour
     public GameObject projectile;
 
     [SerializeField] private int projectileDistance = 3;
-    private float timeStamp;
+    private double timeStamp;
     private GameObject clone;
-    private float projectileCoolDown;
-    private float offsetConstant = 1;
+    private double projectileCoolDown;
+    private double offsetConstant = 0.5;
 
     // Start is called before the first frame update
     void Start()
