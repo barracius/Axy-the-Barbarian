@@ -22,23 +22,19 @@ public class Axy : MonoBehaviour
     {
         
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {    
-            Debug.Log("arriba");
+        {
             transform.Translate(movementSpeed * Time.deltaTime * Vector3.up);
         }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            Debug.Log("izq");
             transform.Translate(movementSpeed * Time.deltaTime * Vector3.left);
         }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            Debug.Log("der");
             transform.Translate(movementSpeed * Time.deltaTime * Vector3.right);
         }
-        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            Debug.Log("abajo");
             transform.Translate(movementSpeed * Time.deltaTime * Vector3.down);
         }
     }
