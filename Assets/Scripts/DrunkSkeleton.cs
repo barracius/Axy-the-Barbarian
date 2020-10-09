@@ -10,6 +10,7 @@ public class DrunkSkeleton : MonoBehaviour
 
     private int projectileDistance = 3;
     private float timeStamp;
+    private GameObject clone;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class DrunkSkeleton : MonoBehaviour
     }
     void Shoot()
     {
+        Destroy(clone);
         timeStamp = Time.time + projectileCoolDown;
        
         int x = Random.Range(-3, 4);
@@ -38,8 +40,7 @@ public class DrunkSkeleton : MonoBehaviour
             x = Random.Range(-3, 4);
             y = Random.Range(-3, 4);
         }
-        projectile.transform.position = gameObject.transform.position;
-        projectile.transform.position += new Vector3(x,y,0);
-        
+        clone = Instantiate(projectile, gameObject.transform.position + new Vector3(x,y,0),Quaternion.identity);
+
     }
 }
