@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Axy : MonoBehaviour
@@ -38,6 +40,18 @@ public class Axy : MonoBehaviour
             transform.Translate(movementSpeed * Time.deltaTime * Vector3.down);
         }
     }
-    
-    
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        /*if (other.gameObject.CompareTag("Wall") )
+        {
+            Debug.Log("PARED");
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("ENEMIGO");
+        }*/
+        EditorApplication.Beep();
+    }
 }
