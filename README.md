@@ -1,49 +1,18 @@
 # Axy, the Barbarian
 
-## Part 1, Moving Around
+## Part 4
 
-Goal: game must have a simple avatar that can move around the console (can be a square or circle)
-Use arrow keys (or WASD) to move
-Write all code in one file, do not write extra scripts, code it as simple as possible
-Bonus: change background or character color
+- Refactor your code to implement the Separation of segments of code into their own methods, like Input and Movement and State Updates
+- Change your movement codes and timers to use time.deltaTimeso it can take real time into account 
 
-Do not use: Physics.Rigidbody2D for now
-- Use transforms instead
+## Part 5
 
-Methods and properties to use:
-- Input.GetKey(Keycode) 
-- new Vector2(x,y)
-- transform.Translate(Vector2)
-
-Optional
-- Change Background Color
-- Change avatar Color
-- Make movement speed a variable
-
-## Part 2, Adding an enemy: a blind gazer
-
-Adding an enemy: a blind gazer
-- Build on previous game
-- Gazer will be patrolling an area
-- Moving from top to bottom, then back from bottom to top, from position (2, -3) to (2, 3) and back
-- You also have tobe able to move your main character around
-- Use only one script for the Gazer
-
-PRO TIP: you may need to use a state tracker:
-- Moving up or down with a boolean
-
-Problems found?
-- We block inputs from player if not careful
-- We have tocontrol the speed of objects (too fast if set to 1)
-
-## Part 3, Adding an enemy: a drunk skeleton archer, stationary enemy that shoots projectiles
-
-Projectile will show up as a sprite that appears randomly anywhere within a 3 unit radius
-- When a new arrow is shot, the previous one disappears
-- Frequency of shooting has tobe offset from speed of the blind gazer’s movement
-- Use GameObject.Instantiate() for the arrow
-- PRO TIP: you can use Random.Range() method for the random location generation
-
-Problems encountered?
-- Code to update state is getting longer and mixed up
-- Will get hard to maintain
+- Add visible walls to your dungeon (at least 4 large walls surrounding most of the area) as Game Objects
+- Detect when the player collides into an enemy or wall, and prevent him from moving in that direction
+- Make the game play a sound when this happens
+- PRO TIP: You can use EditorApplication.Beep() for a beep sound
+- You can use AudioSourcecomponents with specific clips to play when there’s a collision with AudioSource.Play()
+- Use 2D colliders for the sake of collision
+- void OnCollisionEnter2D() is your friend
+- If it’s not detecting the collision, add a “Rigidbody2D” to the player that is set to “dynamic” with gravity = 0
+- Make sure the walls are visible
