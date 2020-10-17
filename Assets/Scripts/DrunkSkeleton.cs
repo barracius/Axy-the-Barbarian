@@ -38,7 +38,7 @@ public class DrunkSkeleton : MonoBehaviour
         timeStamp = Time.time + projectileCoolDown;
         
         float number = Random.Range(0.1f, 1.0f);
-        Debug.Log(number);
+        //Debug.Log(number);
         float r = 3 * Mathf.Sqrt(number);
         float angle = Random.Range(0.0f, 1.0f) * 2 * Mathf.PI;
 
