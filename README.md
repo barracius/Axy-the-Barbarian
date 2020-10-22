@@ -1,18 +1,20 @@
 # Axy, the Barbarian
 
-## Part 4
+## Part 6
 
-- Refactor your code to implement the Separation of segments of code into their own methods, like Input and Movement and State Updates
-- Change your movement codes and timers to use time.deltaTimeso it can take real time into account 
+- Implement the Component pattern for your Playergame object
+    - Components must communicate by “modifying other components”
+    - You must create an InputController, a PhysicsController, StateControllerand an AudioController(with an AuidoSourceComponent)
+    - transform.GetComponent<Component>() is useful here
+- Protip:In the Start() method, Get the components
 
-## Part 5
+## Part 7
 
-- Add visible walls to your dungeon (at least 4 large walls surrounding most of the area) as Game Objects
-- Detect when the player collides into an enemy or wall, and prevent him from moving in that direction
-- Make the game play a sound when this happens
-- PRO TIP: You can use EditorApplication.Beep() for a beep sound
-- You can use AudioSourcecomponents with specific clips to play when there’s a collision with AudioSource.Play()
-- Use 2D colliders for the sake of collision
-- void OnCollisionEnter2D() is your friend
-- If it’s not detecting the collision, add a “Rigidbody2D” to the player that is set to “dynamic” with gravity = 0
-- Make sure the walls are visible
+- Implement the Component pattern for all ofyour objects
+    - There should only be scripts and components
+    - Skeleton must have a shooting script, and a timing script 
+    - Gazer must have a movement script and an update state script2.
+- Add a win condition: when a player reaches/collides with a new “exit” object3
+- Add a lose condition: If a player and an enemy/arrow collide, the game ends/restarts
+- Tips:
+    - One generic script may be enough to be used by several objects, but only if truly generic.
