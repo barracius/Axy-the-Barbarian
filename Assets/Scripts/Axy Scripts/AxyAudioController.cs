@@ -12,6 +12,7 @@ namespace Axy_Scripts
         {
             if (mainController.stateController.state.Equals("Loss"))
             {
+                // Falta implementar el componente de AudioSource
                 EditorApplication.Beep();
             }
         }
