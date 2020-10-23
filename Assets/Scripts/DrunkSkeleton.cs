@@ -7,8 +7,7 @@ public class DrunkSkeleton : MonoBehaviour
     
 
     public GameObject projectile;
-
-    [SerializeField] private int projectileDistance = 3;
+    
     private double timeStamp;
     private GameObject clone;
     private double projectileCoolDown;
@@ -38,20 +37,13 @@ public class DrunkSkeleton : MonoBehaviour
         timeStamp = Time.time + projectileCoolDown;
         
         float number = Random.Range(0.1f, 1.0f);
-        //Debug.Log(number);
+        
         float r = 3 * Mathf.Sqrt(number);
         float angle = Random.Range(0.0f, 1.0f) * 2 * Mathf.PI;
 
         float x = r * Mathf.Cos(angle);
         float y = r * Mathf.Sin(angle);
         
-//        int x = Random.Range(-projectileDistance, projectileDistance + 1);
-//        int y = Random.Range(-projectileDistance, projectileDistance + 1);
-//        while (x==0 && y==0)
-//        {
-//            x = Random.Range(-projectileDistance, projectileDistance + 1);
-//            y = Random.Range(-projectileDistance, projectileDistance + 1);
-//        }
         clone = Instantiate(projectile, gameObject.transform.position + new Vector3(x,y,0),Quaternion.identity);
         clone.SetActive(true);
     }

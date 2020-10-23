@@ -690,6 +690,10 @@ GameObject:
   - component: {fileID: 1594651347}
   - component: {fileID: 1594651348}
   - component: {fileID: 1594651343}
+  - component: {fileID: 1594651352}
+  - component: {fileID: 1594651351}
+  - component: {fileID: 1594651350}
+  - component: {fileID: 1594651349}
   m_Layer: 0
   m_Name: Axy
   m_TagString: Player
@@ -792,6 +796,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
+  inputController: {fileID: 1594651351}
+  physicsController: {fileID: 1594651352}
+  audioController: {fileID: 1594651350}
+  stateController: {fileID: 1594651349}
 --- !u!70 &1594651348
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -808,6 +816,58 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &1594651349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594651342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2e95008614620458f3c6b51245a055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainController: {fileID: 1594651347}
+--- !u!114 &1594651350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594651342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67498763e45c9c43bf83e5a41860508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainController: {fileID: 1594651347}
+--- !u!114 &1594651351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594651342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1985c173fe39346a3c74173dfacc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainController: {fileID: 1594651347}
+--- !u!114 &1594651352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594651342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99a2a87be6415a4288aa12b9c868dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainController: {fileID: 1594651347}
 --- !u!1 &1820327459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1095,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 843584471}
-  projectileDistance: 3
 --- !u!1 &2133603938
 GameObject:
   m_ObjectHideFlags: 0
