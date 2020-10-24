@@ -1,4 +1,5 @@
 using System;
+using BG_Scripts;
 using UnityEditor;
 using UnityEngine;
 namespace DS_Scripts
@@ -31,7 +32,7 @@ namespace DS_Scripts
         void calculateSpeedOffset()
         {
             GameObject blindGazer = GameObject.Find("Blind Gazer");
-            BlindGazer blindGazerScript = blindGazer.GetComponent<BlindGazer>();
+            BgMovementController blindGazerScript = blindGazer.GetComponent<BgMovementController>();
 
             projectileCoolDown = (1 / blindGazerScript.movementSpeed) + offsetConstant;
         }

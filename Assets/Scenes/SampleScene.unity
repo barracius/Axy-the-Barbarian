@@ -321,9 +321,11 @@ GameObject:
   - component: {fileID: 814079773}
   - component: {fileID: 814079772}
   - component: {fileID: 814079771}
-  - component: {fileID: 814079774}
   - component: {fileID: 814079770}
   - component: {fileID: 814079775}
+  - component: {fileID: 814079777}
+  - component: {fileID: 814079776}
+  - component: {fileID: 814079774}
   m_Layer: 0
   m_Name: Blind Gazer
   m_TagString: Enemy
@@ -417,10 +419,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 814079769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a730bb2b82a41478f4ccd7cd64e214, type: 3}
+  m_Script: {fileID: 11500000, guid: 43e6e598f10845ba94d33299ec70176f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
   NumberOfMovements: 100
 --- !u!50 &814079775
 Rigidbody2D:
@@ -443,6 +444,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &814079776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814079769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875aa98cce1147529b27ce5b03503ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  mainController: {fileID: 814079777}
+--- !u!114 &814079777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814079769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfbadce068494d7bbb0d17e699d88cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementControllerController: {fileID: 814079776}
+  stateController: {fileID: 814079774}
 --- !u!1 &843584471
 GameObject:
   m_ObjectHideFlags: 0
