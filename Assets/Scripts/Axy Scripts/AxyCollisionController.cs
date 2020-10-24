@@ -10,15 +10,15 @@ namespace Axy_Scripts
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                mainController.stateController.ChangeState("Loss");
+                mainController.stateController.ChangeState("Dead");
             }
         }
 
-        private void OnCollisionExit2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Finish"))
             {
-                mainController.stateController.ChangeState("");
+                mainController.stateController.ChangeState("Win");
             }
         }
     }

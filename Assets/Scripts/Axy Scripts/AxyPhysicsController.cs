@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Axy_Scripts
 {
@@ -6,7 +7,13 @@ namespace Axy_Scripts
     {
         [SerializeField] private float movementSpeed = 5;
         [SerializeField] private AxyMainController mainController;
-    
+        private Vector2 _startingPosition;
+
+        private void Start()
+        {
+            _startingPosition = transform.position;
+        }
+
         private void FixedUpdate()
         {
             if (mainController.inputController.IsLeftPressed)
@@ -27,6 +34,12 @@ namespace Axy_Scripts
             if (mainController.inputController.IsDownPressed)
             {
                 transform.Translate(movementSpeed * Time.deltaTime * Vector3.down);
+            }
+
+            if (mainController.stateController.state.Equals("Restart"))
+            {
+                transform.position = _startingPosition;
+                mainController.stateController.ChangeState("");
             }
         }
     }

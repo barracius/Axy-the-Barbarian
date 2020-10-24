@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Wall
   - Enemy
+  - FinishLine
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Finish Line
+  - Probando
   - 
   - 
   - 
