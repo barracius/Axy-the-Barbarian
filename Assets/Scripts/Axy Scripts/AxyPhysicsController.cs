@@ -12,6 +12,7 @@ namespace Axy_Scripts
         private void Start()
         {
             _startingPosition = transform.position;
+            AxyStateController.AxyDie += GoToStart;
         }
 
         private void FixedUpdate()
@@ -35,12 +36,12 @@ namespace Axy_Scripts
             {
                 transform.Translate(movementSpeed * Time.deltaTime * Vector3.down);
             }
+            
+        }
 
-            if (mainController.stateController.state.Equals("Restart"))
-            {
-                transform.position = _startingPosition;
-                mainController.stateController.ChangeState("");
-            }
+        void GoToStart()
+        {
+            transform.position = _startingPosition;
         }
     }
 }
