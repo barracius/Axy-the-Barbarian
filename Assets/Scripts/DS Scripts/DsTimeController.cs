@@ -8,7 +8,7 @@ namespace DS_Scripts
     {
         internal double timeStamp;
         internal double projectileCoolDown;
-        internal double offsetConstant = 0.5;
+        public double offsetConstant = 0.5;
 
         internal bool isTimeToShoot;
 
@@ -31,10 +31,7 @@ namespace DS_Scripts
 
         void calculateSpeedOffset()
         {
-            GameObject blindGazer = GameObject.Find("Blind Gazer");
-            BgMovementController blindGazerScript = blindGazer.GetComponent<BgMovementController>();
-
-            projectileCoolDown = (1 / blindGazerScript.movementSpeed) + offsetConstant;
+            projectileCoolDown =  offsetConstant;
         }
     }
     
