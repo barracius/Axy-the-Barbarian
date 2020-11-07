@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainController: {fileID: 4257516804869668706}
-  movementSpeed: 2
+  fleeingMovementSpeed: 5
+  wanderingMovementSpeed: 3
 --- !u!114 &4257516804869668704
 MonoBehaviour:
   m_ObjectHideFlags: 0
