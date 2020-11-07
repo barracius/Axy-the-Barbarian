@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 799264606}
   - component: {fileID: 799264605}
   - component: {fileID: 799264604}
+  - component: {fileID: 799264607}
   - component: {fileID: 799264602}
   m_Layer: 0
   m_Name: Spawner
@@ -584,6 +585,7 @@ MonoBehaviour:
   axyFactory: {fileID: 799264606}
   wallFactory: {fileID: 799264604}
   finishLineFactory: {fileID: 799264605}
+  ratFactory: {fileID: 799264607}
 --- !u!114 &799264603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,6 +638,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3265165438464275181, guid: 355e2eb6aae45b24388ccd911006eb0a, type: 3}
+--- !u!114 &799264607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799264599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036818830e1cab74c8dbd1500103b539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4257516804869668706, guid: 76bbc4dcaae73954faf676e304507e43, type: 3}
 --- !u!1 &1891568229
 GameObject:
   m_ObjectHideFlags: 0

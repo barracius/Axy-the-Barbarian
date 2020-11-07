@@ -8,21 +8,13 @@ namespace Game_Controller_Scripts
     public class JsonReader : MonoBehaviour
     {
         public TextAsset jsonFile;
-        
-        [SerializeField]
-        private BlindGazerFactory blindGazerFactory;
-        
-        [SerializeField]
-        private DrunkSkeletonFactory drunkSkeletonFactory;
-        
-        [SerializeField]
-        private AxyFactory axyFactory;
-        
-        [SerializeField]
-        private WallFactory wallFactory;
-        
-        [SerializeField]
-        private FinishLineFactory finishLineFactory;
+        // Factories
+        [SerializeField] private BlindGazerFactory blindGazerFactory;
+        [SerializeField] private DrunkSkeletonFactory drunkSkeletonFactory;
+        [SerializeField] private AxyFactory axyFactory;
+        [SerializeField] private WallFactory wallFactory;
+        [SerializeField] private FinishLineFactory finishLineFactory;
+        [SerializeField] private RatFactory ratFactory;
         
         void Start()
         {
@@ -30,6 +22,7 @@ namespace Game_Controller_Scripts
             CreateWalls(jsoNinfo);
             CreateEnemies(jsoNinfo, "BG");
             CreateEnemies(jsoNinfo, "DS");
+            CreateEnemies(jsoNinfo, "Rat");
             CreateAxy(jsoNinfo);
             CreateFinishLine(jsoNinfo);
             
@@ -58,13 +51,22 @@ namespace Game_Controller_Scripts
                     inst.transform.position = new Vector2(enemy.positions[i], enemy.positions[i+1]);
                 }
             }
-            else
+            else if (ene == "DS")
             {
                 drunkSkeletonJSON enemy = json.drunkSkeletons[0];
                 for (int i = 0; i < enemy.positions.Count - 1; i += 2)
                 {
                     var inst = drunkSkeletonFactory.GetNewInstance();
                     inst.transform.position = new Vector2(enemy.positions[i], enemy.positions[i+1]);
+                }
+            }
+            else if (ene == "Rat")
+            {
+                ratJSON rat = json.rats[0];
+                for (int i = 0; i < rat.positions.Count - 1; i+= 2)
+                {
+                    var inst = ratFactory.GetNewInstance();
+                    inst.transform.position = new Vector2(rat.positions[i], rat.positions[i+1]);
                 }
             }
         }

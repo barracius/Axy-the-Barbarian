@@ -27,5 +27,10 @@ map["finishLine"].append({
     "position": [-25.32712, -8.29867]
 })
 
+map["rats"] = []
+map["rats"].append({
+    "positions": [-13.1, -0.9, 0, 4, 20, -6.5]
+})
+
 with open('test2.txt', 'w') as outfile:
     json.dump(map, outfile)
