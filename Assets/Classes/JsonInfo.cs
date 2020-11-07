@@ -8,5 +8,6 @@ namespace Classes
         public drunkSkeletonJSON[] drunkSkeletons;
         public wallJSON[] walls;
         public finishLineJSON[] finishLine;
+        public ratJSON[] rats;
     }
 }

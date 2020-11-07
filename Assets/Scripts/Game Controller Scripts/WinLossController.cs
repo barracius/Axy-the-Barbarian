@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Game_Controller_Scripts
 {
-    public class WinLooseController : MonoBehaviour
+    public class WinLossController : MonoBehaviour
     {
         [SerializeField] internal Image blackScreen;
 
