@@ -13,5 +13,6 @@ public class HungryZombieMainController : MonoBehaviour
     {
         GameObject axy = GameObject.FindGameObjectWithTag("Player");
         _destinationSetter.target = axy.transform;
+        AstarPath.active.Scan();
     }
 }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1614481906931139529}
   - component: {fileID: 1614481906931139534}
   - component: {fileID: -4592703301721304417}
+  - component: {fileID: 3125815178035030501}
   m_Layer: 20
   m_Name: Hungry Zombie
   m_TagString: Enemy
@@ -129,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 2
   radius: 0.49
-  height: 2
+  height: 1.06
   repathRate: 0.5
   canSearch: 1
   canMove: 1
@@ -144,8 +145,8 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 1.29
+  slowdownDistance: 0.5
+  pickNextWaypointDist: 0.1
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
@@ -210,7 +211,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.51, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &-4592703301721304417
 MonoBehaviour:
@@ -225,3 +226,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destinationSetter: {fileID: 1614481906931139531}
+--- !u!58 &3125815178035030501
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614481906931139532}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
