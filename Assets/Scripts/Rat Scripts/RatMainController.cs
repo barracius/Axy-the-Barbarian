@@ -7,12 +7,19 @@ namespace Rat_Scripts
     {
         [SerializeField] internal RatTriggerController triggerController;
         [SerializeField] internal RatPhysicsController physicsController;
-        internal bool fleeing; //false = wandering, true = fleeing
+        public bool fleeing; //false = wandering, true = fleeing
+        public static bool sFlee;
         internal Vector2 axyPosition;
 
         private void Start()
         {
             fleeing = false;
+        }
+
+        private void Update()
+        {
+            sFlee = fleeing;
+
         }
     }
 }

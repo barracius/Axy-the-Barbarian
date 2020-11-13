@@ -10,6 +10,7 @@ public class RatPhysicsController : MonoBehaviour
     [SerializeField] private float wanderingMovementSpeed = 2;
     private int _randomTemp;
     
+    
     void FixedUpdate()
     {
         if (mainController.fleeing)

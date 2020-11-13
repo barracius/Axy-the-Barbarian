@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4257516804869668704}
   - component: {fileID: 4257516804869668719}
   - component: {fileID: 4257516804869668712}
+  - component: {fileID: 3315104231111467940}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -115,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerController: {fileID: 4257516804869668704}
   physicsController: {fileID: 4257516804869668705}
+  fleeing: 0
 --- !u!114 &4257516804869668705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainController: {fileID: 4257516804869668706}
-  movementSpeed: 2
+  fleeingMovementSpeed: 5
+  wanderingMovementSpeed: 2
 --- !u!114 &4257516804869668704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,3 +182,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3315104231111467940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257516804869668711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d72765d9324a3fa4b2cbfadf006a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  night: 1
