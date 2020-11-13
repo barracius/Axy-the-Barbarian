@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4257516804869668719}
   - component: {fileID: 4257516804869668712}
   - component: {fileID: 3315104231111467940}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Rat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainController: {fileID: 4257516804869668706}
   fleeingMovementSpeed: 5
-  wanderingMovementSpeed: 2
+  wanderingMovementSpeed: 3
 --- !u!114 &4257516804869668704
 MonoBehaviour:
   m_ObjectHideFlags: 0

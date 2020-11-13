@@ -32,5 +32,10 @@ map["rats"].append({
     "positions": [-13.1, -0.9, 0, 4, 20, -6.5]
 })
 
+map["hungryZombies"] = []
+map["hungryZombies"].append({
+    "positions": [0, 7.2]
+})
+
 with open('test2.txt', 'w') as outfile:
     json.dump(map, outfile)

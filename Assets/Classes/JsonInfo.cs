@@ -9,5 +9,6 @@ namespace Classes
         public wallJSON[] walls;
         public finishLineJSON[] finishLine;
         public ratJSON[] rats;
+        public hungryZombieJSON[] hungryZombies;
     }
 }
