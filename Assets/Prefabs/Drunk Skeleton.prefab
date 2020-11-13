@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5950497053806944040}
   - component: {fileID: 5950497053806944041}
   - component: {fileID: 5950497053806944042}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Projectile
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 5950497054815543025}
   - component: {fileID: 5950497054815543026}
   - component: {fileID: 5950497054815542543}
-  m_Layer: 0
+  m_Layer: 23
   m_Name: Drunk Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -256,3 +256,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838a807756264f58b656320a3beb2f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetConstant: 0.5

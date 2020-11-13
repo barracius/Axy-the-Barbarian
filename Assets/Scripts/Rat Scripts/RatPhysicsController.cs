@@ -46,7 +46,7 @@ public class RatPhysicsController : MonoBehaviour
     
     private void Wander()
     {
-        _randomTemp = Random.Range(0, 3);
+        _randomTemp = Random.Range(0, 4);
         switch (_randomTemp)
         {
             case 0:
@@ -58,7 +58,7 @@ public class RatPhysicsController : MonoBehaviour
             case 2:
                 transform.Translate(wanderingMovementSpeed * Time.deltaTime * Vector2.up);
                 break;
-            default:
+            case 3:
                 transform.Translate(wanderingMovementSpeed * Time.deltaTime * Vector2.down); 
                 break;
         }

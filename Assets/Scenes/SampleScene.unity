@@ -358,7 +358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &261400648
 GameObject:
@@ -515,8 +515,126 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545644774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545644775}
+  - component: {fileID: 545644776}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545644775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545644774}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3190701, w: 0.94773114}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -37.213}
+--- !u!114 &545644776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545644774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAACon+ufE6l9ggIAADIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE2PmzAQ/SuRz01kCBDSW5tksz3shzateuHiwBCsgI1ss0l2lf/esYFAU/WEmZn3/ObNwCfhQteQGqm2imdPMgPydULsmXyZDMlHOLODFDv+AX3NmrMKDChbx1zZGzNcYsqzSC0xq3j6TRxKW08x2AieS1VtsgOspDYawzkrNWBKSWPRAkOfE3LGx3RpIRc8+Qt7+sDTkk6ueExB2IuH0nC28H0aRJspjTrQlM7oIqTUW8w78NSbzQOPhoG/xLrYMTUiLVlVQ2Y7GwjDeIZQSudxxxYgm43MPQcT6EGHoDMvtJJkWXLdNUDMpXYe7eoCFFiHst4t5MLXAvihMLa3MfYlzzWYzizFLmuu0NaWlHyXprBMFdPHVuk7Kxt7jR96URj7gZPWMj/9UzRtledKVo/95R61F5mCp8c3dkmZNqOJjMPrQb3nXDux8sj2JfwuQDzLrZKNyDBpVGOhjQZ/Pbze+lsVkB6HeCv1LtjUwxj6BaC3CU6uV2fBeVXyau/sD9rArpTOc7c1oHBAP1Cw2yndUWDUqvil4Sc7jJevSzxwpQ2mui6FlbeXjbKlZOM8s900ZiWVADVmqEGw0lxekcfcD/Iu93/UA7OfWnd7l+s/nzuICw/1lN6lXuXpNi1dyNMT6OKlMSUXMFhtE89o1EoK0e7ZuKUetmtUztKxhkPDs7+Xi0RBHGVxEOcL6tN9FExDyhZRlrJ0GQResADito8LbJSVr63Szh+cmxhECdy0/hc02SpWu6XPFDtt+Ucl9VDJRS53qQIQLy3DTTkovAQ/z2yTcXRoB8Zw4SZOPhNSyvQIWXIjSlyrm7NRLBlYElLzd2lsJCEr98NJyJVc/wBQSwMEFAAACAgAAKif6zsXOahtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKZiYVZioWJRZq5gZFBkpmJrqlBorlZSnJisqWJiaGJeapSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAKif658TqX2CAgAAMgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAKif6zsXOahtAAAAeAAAAAkAJAAAAAAAAAAAAAAAzwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAACHAwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames:
+  - Basic Ground
+  - Wall
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
 --- !u!1 &799264599
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +650,7 @@ GameObject:
   - component: {fileID: 799264605}
   - component: {fileID: 799264604}
   - component: {fileID: 799264607}
+  - component: {fileID: 799264608}
   - component: {fileID: 799264602}
   m_Layer: 0
   m_Name: Spawner
@@ -565,7 +684,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &799264602
 MonoBehaviour:
@@ -586,6 +705,7 @@ MonoBehaviour:
   wallFactory: {fileID: 799264604}
   finishLineFactory: {fileID: 799264605}
   ratFactory: {fileID: 799264607}
+  hungryZombieFactory: {fileID: 799264608}
 --- !u!114 &799264603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,6 +771,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4257516804869668706, guid: 76bbc4dcaae73954faf676e304507e43, type: 3}
+--- !u!114 &799264608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799264599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddaa1c82a0c61cb47a3c208004efaac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: -4592703301721304417, guid: 09a08f43ea7de7a438606809d50a0563, type: 3}
 --- !u!1 &1891568229
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +876,7 @@ RectTransform:
   m_Children:
   - {fileID: 261400649}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

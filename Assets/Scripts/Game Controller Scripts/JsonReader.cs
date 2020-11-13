@@ -15,6 +15,7 @@ namespace Game_Controller_Scripts
         [SerializeField] private WallFactory wallFactory;
         [SerializeField] private FinishLineFactory finishLineFactory;
         [SerializeField] private RatFactory ratFactory;
+        [SerializeField] private HungryZombieFactory hungryZombieFactory;
         
         void Start()
         {
@@ -24,6 +25,7 @@ namespace Game_Controller_Scripts
             CreateEnemies(jsoNinfo, "DS");
             CreateEnemies(jsoNinfo, "Rat");
             CreateAxy(jsoNinfo);
+            CreateEnemies(jsoNinfo, "HZ");
             CreateFinishLine(jsoNinfo);
             
         }
@@ -67,6 +69,16 @@ namespace Game_Controller_Scripts
                 {
                     var inst = ratFactory.GetNewInstance();
                     inst.transform.position = new Vector2(rat.positions[i], rat.positions[i+1]);
+                }
+            }
+            else if (ene == "HZ")
+            {
+                hungryZombieJSON zombies = json.hungryZombies[0];
+                for (int i = 0; i < zombies.positions.Count - 1; i+= 2)
+                {
+                    var inst = hungryZombieFactory.GetNewInstance();
+                    inst.transform.position = new Vector2(zombies.positions[i], zombies.positions[i+1]);
+                    
                 }
             }
         }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2569333085167515575}
   - component: {fileID: 2569333085167515574}
   - component: {fileID: 2569333085167515528}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Blind Gazer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
