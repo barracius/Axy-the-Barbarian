@@ -5,17 +5,19 @@ namespace Rat_Scripts
 {
     public class NightNode : Node
     {
-        private bool _night;
+        private Transform _camera;
+        private DayNightScript _dayNightScript;
         
 
-        public NightNode(bool night)
+        public NightNode(Transform camera)
         {
-            _night = night;
+            _camera = camera;
+            _dayNightScript = _camera.GetComponent<DayNightScript>();
         }
 
         public override NodeStates Evaluate()
         {
-            return _night ? NodeStates.SUCCESS : NodeStates.FAILURE;
+            return _dayNightScript.isNight ? NodeStates.SUCCESS : NodeStates.FAILURE;
         }
     }
 }

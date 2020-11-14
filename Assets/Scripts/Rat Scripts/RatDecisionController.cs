@@ -17,13 +17,12 @@ namespace Rat_Scripts
         private FleeNode _fleeNode;
         private WanderNode _wanderNode;
         private AttackNode _attackNode;
-        public bool night = false;
-        private void ContructDecisionTree()
+        private void ConstructDecisionTree()
         {
             var transform1 = transform;
             _dayNearNode = new NearNode(transform1, mainController.axy, mainController.fleeDistance);
             _nightNearNode = new NearNode(transform1, mainController.axy, mainController.attackDistance);
-            _nightNode = new NightNode(night);
+            _nightNode = new NightNode(GameObject.FindGameObjectWithTag("MainCamera").transform);
             _attackNode = new AttackNode(transform1, mainController.axy);
             _fleeNode = new FleeNode(transform1);
             _wanderNode = new WanderNode(transform1);
@@ -31,7 +30,7 @@ namespace Rat_Scripts
 
         private void Start()
         {
-            ContructDecisionTree();
+            ConstructDecisionTree();
         }
 
         private void Update()
