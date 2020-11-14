@@ -5,32 +5,21 @@ namespace Rat_Scripts
 {
     public class NearNode : Node
     {
-        
-        //private GameObject player;
-        private GameObject rat;
-        private float threshold;
+        private Transform _rat;
+        private Transform _axy;
+        private float _threshold;
 
-        public NearNode(GameObject rat, float threshold)
+        public NearNode(Transform rat, Transform axy, float threshold)
         {
-            this.rat = rat;
-            this.threshold = threshold;
+            _rat = rat;
+            _axy = axy;
+            _threshold = threshold;
         }
 
         public override NodeStates Evaluate()
         {
-            //Vector3 offset = rat.transform.position - player.transform.position;
-            //float sqrLen = offset.sqrMagnitude;
-
-            // square the distance we compare with
-            //if (sqrLen < threshold * threshold)
-            if (RatMainController.sFlee)
-            {
-                return NodeStates.SUCCESS;
-            }
-            else
-            {
-                return NodeStates.FAILURE;
-            }
+            float distance = Vector2.Distance(_rat.position, _axy.position);
+            return distance <= _threshold ? NodeStates.SUCCESS : NodeStates.FAILURE;
         }
     }
 }

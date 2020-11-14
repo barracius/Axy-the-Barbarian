@@ -1,36 +1,24 @@
 using General_Scripts;
 using UnityEngine;
 
-namespace Rat_Scripts
+namespace Rat_Scripts.Nodes
 {
     
     public class AttackNode: Node
     {
-        
-        private GameObject player;
-        private GameObject rat;
-        
-        public AttackNode(GameObject rat)
+        private Transform _rat;
+        private Transform _axy;
+
+        public AttackNode(Transform rat, Transform axy)
         {
-            this.rat = rat;
-            //this.player = player;
+            _rat = rat;
+            _axy = axy;
         }
-        
+
         public override NodeStates Evaluate()
         {
-            
-            //float distance = Vector3.Distance(rat.transform.position, player.transform.position);
-            //if(distance > 0.2f)
-            if(RatMainController.sFlee)
-            {
-                Debug.Log("chassing");
-                return NodeStates.RUNNING;
-            }
-            else
-            {
-                
-                return NodeStates.SUCCESS;
-            }
+            Debug.Log("rat attacking axy");
+            return NodeStates.RUNNING;
         }
     }
 }

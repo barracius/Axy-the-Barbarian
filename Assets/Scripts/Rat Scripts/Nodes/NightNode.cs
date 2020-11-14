@@ -5,24 +5,17 @@ namespace Rat_Scripts
 {
     public class NightNode : Node
     {
-        private bool night;
+        private bool _night;
         
 
         public NightNode(bool night)
         {
-            this.night = night;
+            _night = night;
         }
 
         public override NodeStates Evaluate()
         {
-            if (night)
-            {
-                return NodeStates.SUCCESS;
-            }
-            else
-            {
-                return NodeStates.FAILURE;
-            }
+            return _night ? NodeStates.SUCCESS : NodeStates.FAILURE;
         }
     }
 }

@@ -1,36 +1,46 @@
 using General_Scripts;
 using UnityEngine;
 
-namespace Rat_Scripts
+namespace Rat_Scripts.Nodes
 {
     
-    public class fleeNode: Node
+    public class FleeNode: Node
     {
-        
 
-        //private GameObject player;
-        private GameObject rat;
-        
-        public fleeNode( GameObject rat)
+        private RatMainController _ratMainController;
+        private Transform _rat;
+
+        public FleeNode( Transform rat)
         {
-            this.rat = rat;
-            //this.player = player;
+            _rat = rat;
+            _ratMainController = _rat.GetComponent<RatMainController>();
         }
         
         public override NodeStates Evaluate()
         {
-            
-            //float distance = Vector3.Distance(rat.transform.position, player.transform.position);
-            //if(distance <=5.0f)
-            if(RatMainController.sFlee)
+            Flee();
+            return NodeStates.RUNNING;
+        }
+        
+        private void Flee()
+        {
+            if (_ratMainController.axy.position.x < _rat.position.x)
             {
-                Debug.Log("fleeing");
-                return NodeStates.RUNNING;
+                _rat.Translate(_ratMainController.fleeingMovementSpeed * Time.deltaTime * Vector2.right);
             }
             else
             {
-                
-                return NodeStates.SUCCESS;
+                _rat.Translate(_ratMainController.fleeingMovementSpeed * Time.deltaTime * Vector2.left);
+            }
+
+            if (_ratMainController.axy.position.y < _rat.position.y)
+            {
+            
+                _rat.Translate(_ratMainController.fleeingMovementSpeed * Time.deltaTime * Vector2.up);
+            }
+            else 
+            {
+                _rat.Translate(_ratMainController.fleeingMovementSpeed * Time.deltaTime * Vector2.down); 
             }
         }
     }

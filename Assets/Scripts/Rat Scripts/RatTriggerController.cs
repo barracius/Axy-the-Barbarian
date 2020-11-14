@@ -1,34 +1,33 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Rat_Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class RatTriggerController : MonoBehaviour
+namespace Rat_Scripts
 {
-    [SerializeField] private RatMainController mainController;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public class RatTriggerController : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        [SerializeField] private RatMainController mainController;
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            mainController.fleeing = true;
+            if (other.CompareTag("Player"))
+            {
+                mainController.fleeing = true;
+            }
         }
-    }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        private void OnTriggerStay2D(Collider2D other)
         {
-            mainController.axyPosition = other.transform.position;
+            if (other.CompareTag("Player"))
+            {
+                mainController.axy = other.transform;
+            }
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        private void OnTriggerExit2D(Collider2D other)
         {
-            mainController.fleeing = false;
+            if (other.CompareTag("Player"))
+            {
+                mainController.fleeing = false;
+            }
         }
     }
 }

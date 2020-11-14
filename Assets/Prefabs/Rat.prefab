@@ -116,7 +116,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerController: {fileID: 4257516804869668704}
   physicsController: {fileID: 4257516804869668705}
+  decisionController: {fileID: 3315104231111467940}
   fleeing: 0
+  fleeingMovementSpeed: 5
+  wanderingMovementSpeed: 2
+  fleeDistance: 5
+  attackDistance: 6
 --- !u!114 &4257516804869668705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,8 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainController: {fileID: 4257516804869668706}
-  fleeingMovementSpeed: 5
-  wanderingMovementSpeed: 3
 --- !u!114 &4257516804869668704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,4 +197,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d72765d9324a3fa4b2cbfadf006a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainController: {fileID: 4257516804869668706}
   night: 1
